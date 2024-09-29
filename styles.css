@@ -1,0 +1,202 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.auth-links a {
+    text-decoration: none;
+}
+
+.signup-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+}
+
+.menu-icon {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.subheading {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    font-weight: bold;
+}
+
+.cta-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.subtext {
+    margin: 20px 0;
+    font-size: 14px;
+    color: #888;
+}
+
+.dashboard-preview img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 30px;
+}
+
+/* Rainbow gradient text */
+.rainbow-text {
+    background: linear-gradient(90deg, pink, #FF00FF, blue, indigo);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* Side Menu */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Initially hide the menu */
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    transition: right 0.3s ease;
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.side-menu.active {
+    right: 0; /* Show the menu when active */
+}
+
+.close-btn {
+    cursor: pointer;
+    padding: 20px;
+    font-size: 24px;
+    text-align: right;
+}
+
+/* Media Queries */
+@media (max-width: 1023px) {
+    .nav-links {
+        display: none; /* Hide nav links initially on smaller screens */
+    }
+
+    .menu-icon {
+        display: block; /* Show the menu icon on smaller screens */
+    }
+
+    .auth-links {
+        display: none; /* Hide auth links on smaller screens */
+    }
+
+    .navbar ul {
+        display: none; /* Ensure navbar links are not displayed */
+    }
+}
+
+@media (min-width: 1024px) {
+    .menu-icon {
+        display: none; /* Hide the menu icon on larger screens */
+    }
+
+    .nav-links {
+        display: flex; /* Show nav links on larger screens */
+    }
+
+    .auth-links {
+        display: flex; /* Show auth links on larger screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .cta-btn {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+
+    .subtext {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .cta-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
