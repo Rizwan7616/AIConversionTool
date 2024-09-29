@@ -4,15 +4,13 @@ function toggleMenu() {
     const authLinks = document.querySelector('.auth-links');
     const menuIcon = document.querySelector('.menu-icon');
 
-    // Toggle the active class on the navbar
     navbar.classList.toggle('active');
 
-    // Show or hide links based on navbar's active state
     if (navbar.classList.contains('active')) {
-        navLinks.style.display = 'flex'; // Show nav links
-        authLinks.style.display = 'flex'; // Show auth links
+        navLinks.style.display = 'flex'; 
+        authLinks.style.display = 'flex';
     } else {
-        navLinks.style.display = 'none'; // Hide nav links
-        authLinks.style.display = 'none'; // Hide auth links
+        navLinks.style.display = 'none'; 
+        authLinks.style.display = 'none';
     }
 }
