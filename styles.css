@@ -1,3 +1,4 @@
+/* General styles */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -116,6 +117,7 @@ header {
     display: inline-block;
 }
 
+/* Side menu styles */
 .side-menu {
     position: fixed;
     top: 0;
@@ -139,35 +141,49 @@ header {
     text-align: right;
 }
 
+/* Media queries for responsiveness */
 @media (max-width: 1023px) {
-    .nav-links {
-        display: none;
+    .nav-links, .auth-links {
+        display: none; /* Hide nav and auth links by default */
     }
 
     .menu-icon {
-        display: block; 
+        display: block; /* Show the menu icon on smaller screens */
+    }
+
+    .navbar.active .nav-links, 
+    .navbar.active .auth-links {
+        display: flex; /* Show nav and auth links when menu is active */
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    .navbar ul{
+        display: none;
     }
 
     .auth-links {
-        display: none; 
-    }
-
-    .navbar ul {
-        display: none; 
+        margin-top: 10px; /* Add some space between the nav links and auth links */
     }
 }
 
 @media (min-width: 1024px) {
     .menu-icon {
-        display: none;
+        display: none; /* Hide the menu icon on larger screens */
     }
 
     .nav-links {
-        display: flex;
+        display: flex; /* Show nav links on larger screens */
     }
 
     .auth-links {
-        display: flex; 
+        display: flex; /* Show auth links on larger screens */
     }
 }
 
